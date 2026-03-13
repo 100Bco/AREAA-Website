@@ -66,7 +66,7 @@ export default function Membership() {
   return (
     <div className="bg-white min-h-screen pb-20">
       {/* Hero */}
-      <div className="bg-slate-950 text-white h-[480px] md:h-[520px] flex items-end relative overflow-hidden">
+      <div className="bg-slate-950 text-white h-[480px] md:h-[520px] flex items-center relative overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="/Modify 4.jpg"
@@ -77,7 +77,7 @@ export default function Membership() {
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-950/50 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent" />
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pb-20 md:pb-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
