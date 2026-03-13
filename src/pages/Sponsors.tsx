@@ -66,7 +66,7 @@ export default function Sponsors() {
               transition={{ delay: index * 0.1, duration: 0.6 }}
             >
               <div className="text-center mb-6 md:mb-8">
-                <h2 className="font-serif text-2xl md:text-3xl font-medium text-slate-900 mb-3 tracking-tight">
+                <h2 className="font-serif text-2xl md:text-4xl font-medium text-slate-900 mb-3 tracking-tight">
                   {tier.tier} Sponsors
                 </h2>
                 <div className="w-10 h-1 bg-areaa mx-auto rounded-full"></div>
