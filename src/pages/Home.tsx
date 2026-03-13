@@ -99,7 +99,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[90vh] min-h-[600px] flex items-end text-white overflow-hidden">
+      <section className="relative h-[70vh] md:h-[90vh] min-h-[500px] md:min-h-[600px] flex items-end text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="/Herobanner.avif"
@@ -115,21 +115,21 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-20 md:pb-28">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-12 md:pb-28">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
             className="max-w-4xl"
           >
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2 mb-8">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 md:px-5 md:py-2 mb-6 md:mb-8">
               <span className="w-2 h-2 rounded-full bg-areaa"></span>
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-white/90">The Voice of Real Estate</span>
+              <span className="text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-white/90">The Voice of Real Estate</span>
             </div>
-            <h1 className="font-serif text-5xl md:text-7xl font-medium tracking-tight mb-6 leading-[1.1] [text-shadow:0_4px_24px_rgba(0,0,0,0.5)]">
+            <h1 className="font-serif text-3xl sm:text-5xl md:text-7xl font-medium tracking-tight mb-4 md:mb-6 leading-[1.1] [text-shadow:0_4px_24px_rgba(0,0,0,0.5)]">
               Empowering Asian American <span className="text-areaa italic">Real Estate</span> Professionals
             </h1>
-            <p className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl font-light leading-relaxed [text-shadow:0_2px_12px_rgba(0,0,0,0.5)]">
+            <p className="text-base md:text-xl text-white/80 mb-8 md:mb-10 max-w-2xl font-light leading-relaxed [text-shadow:0_2px_12px_rgba(0,0,0,0.5)]">
               Join the Greater Austin chapter of AREAA. We are dedicated to promoting sustainable homeownership opportunities in AAPI communities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -147,7 +147,7 @@ export default function Home() {
       </section>
 
       {/* Member Logos Marquee */}
-      <section className="py-16 bg-white border-b border-slate-100 overflow-hidden">
+      <section className="py-10 md:py-16 bg-white border-b border-slate-100 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 text-center">
           <p className="text-xs font-bold text-slate-400 uppercase tracking-[0.2em]">
             Trusted by our esteemed sponsors and partners
@@ -156,7 +156,7 @@ export default function Home() {
         <div className="relative flex overflow-x-hidden">
           <div className="animate-marquee flex whitespace-nowrap items-center w-max">
             {[...memberLogos, ...memberLogos].map((logo, index) => (
-              <div key={index} className="mx-12 flex-none w-48 h-24 relative transition-all duration-300 hover:scale-105">
+              <div key={index} className="mx-6 md:mx-12 flex-none w-32 md:w-48 h-16 md:h-24 relative transition-all duration-300 hover:scale-105">
                 <img
                   src={logo}
                   alt={`Member Logo ${index}`}
@@ -170,18 +170,18 @@ export default function Home() {
       </section>
 
       {/* Mission & Features */}
-      <section className="py-24 bg-white">
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="font-serif text-4xl md:text-5xl font-medium tracking-tight text-slate-900 mb-6">
+            <h2 className="font-serif text-3xl md:text-5xl font-medium tracking-tight text-slate-900 mb-6">
               Why Join AREAA Greater Austin?
             </h2>
-            <p className="text-lg md:text-xl text-slate-500 font-light leading-relaxed">
+            <p className="text-base md:text-xl text-slate-500 font-light leading-relaxed">
               We provide a platform for real estate professionals to connect, learn, and advocate for the AAPI community in Central Texas.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 md:gap-x-12 gap-y-8 md:gap-y-10">
             {detailedBenefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
@@ -194,7 +194,7 @@ export default function Home() {
                 <div className="mb-4 text-areaa">
                   <benefit.icon className="w-8 h-8 group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-serif text-2xl font-bold text-slate-900 mb-2">{benefit.title}</h3>
+                <h3 className="font-serif text-xl md:text-2xl font-bold text-slate-900 mb-2">{benefit.title}</h3>
                 <p className="text-slate-500 leading-relaxed font-light">{benefit.description}</p>
               </motion.div>
             ))}
@@ -203,14 +203,14 @@ export default function Home() {
       </section>
 
       {/* Upcoming Events */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-16 md:py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-12">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 md:mb-12">
             <div className="max-w-2xl text-left">
-              <h2 className="font-serif text-4xl md:text-5xl font-medium tracking-tight text-slate-900 mb-6">
+              <h2 className="font-serif text-3xl md:text-5xl font-medium tracking-tight text-slate-900 mb-4 md:mb-6">
                 Upcoming Events
               </h2>
-              <p className="text-lg md:text-xl text-slate-500 font-light leading-relaxed">
+              <p className="text-base md:text-xl text-slate-500 font-light leading-relaxed">
                 Join us at our upcoming networking mixers, educational seminars, and community outreach programs.
               </p>
             </div>
@@ -274,14 +274,14 @@ export default function Home() {
       </section>
 
       {/* Event Gallery */}
-      <section className="py-24 bg-white">
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-12">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 md:mb-12">
             <div className="text-left max-w-2xl">
-              <h2 className="font-serif text-4xl md:text-5xl font-medium tracking-tight text-slate-900 mb-6">
+              <h2 className="font-serif text-3xl md:text-5xl font-medium tracking-tight text-slate-900 mb-4 md:mb-6">
                 Event Gallery
               </h2>
-              <p className="text-lg md:text-xl text-slate-500 font-light leading-relaxed">
+              <p className="text-base md:text-xl text-slate-500 font-light leading-relaxed">
                 Take a look back at some of our most memorable moments and community gatherings.
               </p>
             </div>
@@ -340,7 +340,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent" />
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-3xl md:text-5xl font-medium mb-4 tracking-tight leading-tight">Ready to elevate your real estate career?</h2>
+          <h2 className="font-serif text-2xl md:text-5xl font-medium mb-4 tracking-tight leading-tight">Ready to elevate your real estate career?</h2>
           <p className="text-base md:text-lg text-slate-300 mb-6 max-w-2xl mx-auto font-light leading-relaxed">
             Join AREAA Greater Austin today and become part of a national network of over 19,000 real estate professionals.
           </p>

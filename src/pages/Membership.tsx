@@ -66,7 +66,7 @@ export default function Membership() {
   return (
     <div className="bg-white min-h-screen pb-20">
       {/* Hero */}
-      <div className="bg-slate-950 text-white h-[480px] md:h-[520px] flex items-center relative overflow-hidden">
+      <div className="bg-slate-950 text-white h-[400px] md:h-[520px] flex items-center relative overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="/Modify 4.jpg"
@@ -84,8 +84,7 @@ export default function Membership() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="max-w-3xl"
           >
-            <p className="text-areaa text-sm font-bold uppercase tracking-[0.2em] mb-4">Join AREAA</p>
-            <h1 className="font-serif text-4xl md:text-6xl font-medium mb-4 tracking-tight leading-[1.1] [text-shadow:0_4px_24px_rgba(0,0,0,0.5)]">
+            <h1 className="font-serif text-3xl md:text-6xl font-medium mb-4 tracking-tight leading-[1.1] [text-shadow:0_4px_24px_rgba(0,0,0,0.5)]">
               Elevate Your Career.<br />Strengthen Your Community.
             </h1>
             <p className="text-base md:text-lg text-white/80 font-light leading-relaxed mb-8 max-w-2xl [text-shadow:0_2px_12px_rgba(0,0,0,0.5)]">
@@ -113,7 +112,7 @@ export default function Membership() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <p className="font-sans text-3xl md:text-4xl font-bold text-areaa tracking-tight mb-2">
+                <p className="font-sans text-2xl md:text-4xl font-bold text-areaa tracking-tight mb-2">
                   {stat.value}<span className="text-areaa">{stat.suffix}</span>
                 </p>
                 <p className="text-sm text-slate-500 font-light">{stat.label}</p>
@@ -140,7 +139,7 @@ export default function Membership() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-slate-50 rounded-[32px] p-8 border border-slate-100 hover:shadow-xl transition-all duration-700 group"
+                className="bg-slate-50 rounded-2xl md:rounded-[32px] p-6 md:p-8 border border-slate-100 hover:shadow-xl transition-all duration-700 group"
               >
                 <div className="w-12 h-12 bg-white border border-slate-100 rounded-2xl flex items-center justify-center text-areaa mb-6 group-hover:bg-areaa group-hover:text-white transition-colors duration-500">
                   <benefit.icon size={24} strokeWidth={1.5} />
@@ -156,15 +155,15 @@ export default function Membership() {
       {/* Pricing - Unified Layout */}
       <section className="bg-slate-50 py-16 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-[40px] border border-slate-200 shadow-sm overflow-hidden flex flex-col lg:flex-row">
-            
+          <div className="bg-white rounded-2xl md:rounded-[40px] border border-slate-200 shadow-sm overflow-hidden flex flex-col lg:flex-row">
+
             {/* Left side: Price & Info */}
-            <div className="p-10 lg:p-16 lg:w-1/3 bg-slate-900 text-white flex flex-col justify-center">
-              <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4 tracking-tight">{planDetails.name}</h2>
-              <p className="text-slate-300 mb-10 font-light leading-relaxed">{planDetails.description}</p>
-              
-              <div className="flex items-baseline mb-10">
-                <span className="text-6xl md:text-7xl font-sans font-bold tracking-tight text-white">{planDetails.price}</span>
+            <div className="p-6 md:p-10 lg:p-16 lg:w-1/3 bg-slate-900 text-white flex flex-col justify-center">
+              <h2 className="font-serif text-2xl md:text-4xl font-medium mb-4 tracking-tight">{planDetails.name}</h2>
+              <p className="text-slate-300 mb-6 md:mb-10 font-light leading-relaxed text-sm md:text-base">{planDetails.description}</p>
+
+              <div className="flex items-baseline mb-6 md:mb-10">
+                <span className="text-5xl md:text-7xl font-sans font-bold tracking-tight text-white">{planDetails.price}</span>
                 <span className="text-lg text-slate-400 ml-2 font-light tracking-wide">{planDetails.duration}</span>
               </div>
               
@@ -177,8 +176,8 @@ export default function Membership() {
             </div>
 
             {/* Right side: Benefits List */}
-            <div className="p-10 lg:p-16 lg:w-2/3">
-              <h3 className="font-serif text-2xl font-medium text-slate-900 mb-8 border-b border-slate-100 pb-4">Membership Includes</h3>
+            <div className="p-6 md:p-10 lg:p-16 lg:w-2/3">
+              <h3 className="font-serif text-xl md:text-2xl font-medium text-slate-900 mb-6 md:mb-8 border-b border-slate-100 pb-4">Membership Includes</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
                 {benefits.map((feature, i) => (
                   <div key={i} className="flex items-start">

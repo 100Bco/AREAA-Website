@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <div className="bg-white min-h-screen flex flex-col">
       {/* Compact Hero */}
-      <div className="bg-slate-950 text-white h-[280px] md:h-[320px] flex items-center relative overflow-hidden shrink-0">
+      <div className="bg-slate-950 text-white h-[240px] md:h-[320px] flex items-center relative overflow-hidden shrink-0">
         <div className="absolute inset-0 bg-slate-900/10">
           <img
             src="/Modify 2.jpg"
@@ -24,7 +24,7 @@ export default function Contact() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="max-w-3xl"
           >
-            <h1 className="font-serif text-5xl md:text-7xl font-medium mb-6 tracking-tight leading-tight">Get in Touch</h1>
+            <h1 className="font-serif text-3xl md:text-7xl font-medium mb-4 md:mb-6 tracking-tight leading-tight">Get in Touch</h1>
             <p className="text-base md:text-lg text-slate-300 font-light leading-relaxed max-w-xl">
               Have questions about membership, events, or sponsorship? We'd love to hear from you.
             </p>
@@ -35,7 +35,7 @@ export default function Contact() {
       {/* Compact Contact Form & Info */}
       <section className="bg-white py-12 flex-grow">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
             
             {/* Contact Information */}
             <motion.div
@@ -45,7 +45,7 @@ export default function Contact() {
               className="space-y-12"
             >
               <div>
-                <h2 className="font-serif text-3xl md:text-4xl font-medium text-slate-900 mb-4 tracking-tight">How can we help?</h2>
+                <h2 className="font-serif text-2xl md:text-4xl font-medium text-slate-900 mb-4 tracking-tight">How can we help?</h2>
                 <p className="text-base text-slate-500 leading-relaxed font-light">
                   Whether you're looking to join our chapter, sponsor an event, or just want to learn more about our mission, our team is here to help.
                 </p>
@@ -97,7 +97,7 @@ export default function Contact() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-slate-50 p-8 md:p-10 rounded-[32px] border border-slate-100"
+              className="bg-slate-50 p-6 md:p-10 rounded-2xl md:rounded-[32px] border border-slate-100"
             >
               <h2 className="font-serif text-2xl font-medium text-slate-900 mb-6 tracking-tight">Send a Message</h2>
               <form className="space-y-4">
