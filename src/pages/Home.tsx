@@ -102,10 +102,14 @@ export default function Home() {
       <section className="relative h-[90vh] min-h-[600px] flex items-end text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/Modify 1.jpg"
+            src="/Herobanner.avif"
             alt="Austin Skyline"
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
+          />
+          <div
+            className="absolute inset-0 opacity-20 mix-blend-overlay"
+            style={{ backgroundImage: `url(/images/hero-abstract.png)` }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-950/50 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent" />
@@ -118,7 +122,11 @@ export default function Home() {
             transition={{ duration: 1, ease: "easeOut" }}
             className="max-w-4xl"
           >
-            <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight mb-6 leading-[1.1] [text-shadow:0_4px_24px_rgba(0,0,0,0.5)]">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2 mb-8">
+              <span className="w-2 h-2 rounded-full bg-areaa"></span>
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-white/90">The Voice of Real Estate</span>
+            </div>
+            <h1 className="font-serif text-5xl md:text-7xl font-medium tracking-tight mb-6 leading-[1.1] [text-shadow:0_4px_24px_rgba(0,0,0,0.5)]">
               Empowering Asian American <span className="text-areaa italic">Real Estate</span> Professionals
             </h1>
             <p className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl font-light leading-relaxed [text-shadow:0_2px_12px_rgba(0,0,0,0.5)]">
