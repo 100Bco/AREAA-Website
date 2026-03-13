@@ -24,7 +24,7 @@ export default function Contact() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="max-w-3xl"
           >
-            <h1 className="font-serif text-4xl md:text-5xl font-medium mb-3 tracking-tight leading-tight">Get in Touch</h1>
+            <h1 className="font-serif text-5xl md:text-7xl font-medium mb-6 tracking-tight leading-tight">Get in Touch</h1>
             <p className="text-base md:text-lg text-slate-300 font-light leading-relaxed max-w-xl">
               Have questions about membership, events, or sponsorship? We'd love to hear from you.
             </p>

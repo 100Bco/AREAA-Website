@@ -66,7 +66,7 @@ export default function Membership() {
   return (
     <div className="bg-white min-h-screen pb-20">
       {/* Hero */}
-      <div className="bg-slate-950 text-white h-[480px] md:h-[520px] flex items-end relative overflow-hidden">
+      <div className="bg-slate-950 text-white h-[480px] md:h-[520px] flex items-center relative overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="/Modify 4.jpg"
@@ -77,18 +77,18 @@ export default function Membership() {
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-950/50 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent" />
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pb-20 md:pb-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="max-w-3xl"
           >
-            <p className="text-areaa text-sm font-bold uppercase tracking-[0.2em] mb-6">Join AREAA</p>
-            <h1 className="font-serif text-5xl md:text-7xl font-medium mb-6 tracking-tight leading-[1.1] [text-shadow:0_4px_24px_rgba(0,0,0,0.5)]">
+            <p className="text-areaa text-sm font-bold uppercase tracking-[0.2em] mb-4">Join AREAA</p>
+            <h1 className="font-serif text-4xl md:text-6xl font-medium mb-4 tracking-tight leading-[1.1] [text-shadow:0_4px_24px_rgba(0,0,0,0.5)]">
               Elevate Your Career.<br />Strengthen Your Community.
             </h1>
-            <p className="text-lg md:text-xl text-white/80 font-light leading-relaxed mb-10 max-w-2xl [text-shadow:0_2px_12px_rgba(0,0,0,0.5)]">
+            <p className="text-base md:text-lg text-white/80 font-light leading-relaxed mb-8 max-w-2xl [text-shadow:0_2px_12px_rgba(0,0,0,0.5)]">
               Join over 19,000 real estate professionals making real impact for AAPI communities across the nation.
             </p>
             <Button asChild size="lg" className="w-auto">
