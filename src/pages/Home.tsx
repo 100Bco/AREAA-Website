@@ -99,38 +99,43 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[90vh] min-h-[600px] flex items-center justify-center text-white overflow-hidden">
+      <section className="relative h-[90vh] min-h-[600px] flex items-end text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="/Modify 1.jpg"
-            alt="Luxury Home Austin"
+            alt="Austin Skyline"
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/60 to-slate-950/70 backdrop-blur-[2px]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-950/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent" />
         </div>
-        
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center">
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-20 md:pb-28">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="max-w-4xl mx-auto"
+            className="max-w-4xl"
           >
-            <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight mb-6 [text-shadow:0_4px_24px_rgba(0,0,0,0.5)]">
-              Asian Real Estate Association of America
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2 mb-8">
+              <span className="w-2 h-2 rounded-full bg-areaa"></span>
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-white/90">The Voice of Real Estate</span>
+            </div>
+            <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight mb-6 leading-[1.1] [text-shadow:0_4px_24px_rgba(0,0,0,0.5)]">
+              Empowering Asian American <span className="text-areaa italic">Real Estate</span> Professionals
             </h1>
-            <p className="font-serif text-2xl md:text-3xl text-white/90 mb-12 italic tracking-wide [text-shadow:0_2px_12px_rgba(0,0,0,0.5)]">
-              Greater Austin Chapter
+            <p className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl font-light leading-relaxed [text-shadow:0_2px_12px_rgba(0,0,0,0.5)]">
+              Join the Greater Austin chapter of AREAA. We are dedicated to promoting sustainable homeownership opportunities in AAPI communities.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="w-full sm:w-auto">
                 <Link to="/membership">
                   Become a Member
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="w-full sm:w-auto bg-transparent text-white border-white hover:bg-white hover:text-black">
-                <Link to="/events">View Events</Link>
+              <Button asChild size="lg" variant="outline" className="w-full sm:w-auto bg-transparent text-white border-white/40 hover:bg-white hover:text-black">
+                <Link to="/events">View Upcoming Events</Link>
               </Button>
             </div>
           </motion.div>
