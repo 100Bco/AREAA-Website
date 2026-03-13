@@ -55,8 +55,8 @@ export default function Sponsors() {
       </div>
 
       {/* Sponsors List */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-32 bg-white">
-        <div className="space-y-16 md:space-y-32">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 bg-white">
+        <div className="space-y-10 md:space-y-14">
           {sponsors.map((tier, index) => (
             <motion.div
               key={tier.tier}
@@ -65,15 +65,15 @@ export default function Sponsors() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.6 }}
             >
-              <div className="text-center mb-10 md:mb-20">
-                <h2 className="font-serif text-3xl md:text-5xl font-medium text-slate-900 mb-6 tracking-tight">
+              <div className="text-center mb-6 md:mb-8">
+                <h2 className="font-serif text-2xl md:text-3xl font-medium text-slate-900 mb-3 tracking-tight">
                   {tier.tier} Sponsors
                 </h2>
-                <div className="w-12 h-1.5 bg-areaa mx-auto rounded-full"></div>
+                <div className="w-10 h-1 bg-areaa mx-auto rounded-full"></div>
               </div>
-              <div className="flex flex-wrap justify-center gap-8 md:gap-12 lg:gap-20">
+              <div className="flex flex-wrap justify-center gap-6 md:gap-10">
                 {tier.companies.map((company, i) => (
-                  <div key={i} className="flex items-center justify-center w-32 h-16 md:w-48 md:h-24">
+                  <div key={i} className="flex items-center justify-center w-28 h-14 md:w-40 md:h-20">
                     <img
                       src={company.logo}
                       alt={company.name}
