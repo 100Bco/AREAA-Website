@@ -118,10 +118,6 @@ export default function Home() {
             transition={{ duration: 1, ease: "easeOut" }}
             className="max-w-4xl"
           >
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2 mb-8">
-              <span className="w-2 h-2 rounded-full bg-areaa"></span>
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-white/90">The Voice of Real Estate</span>
-            </div>
             <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight mb-6 leading-[1.1] [text-shadow:0_4px_24px_rgba(0,0,0,0.5)]">
               Empowering Asian American <span className="text-areaa italic">Real Estate</span> Professionals
             </h1>
