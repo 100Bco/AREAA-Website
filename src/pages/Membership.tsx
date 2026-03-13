@@ -66,7 +66,7 @@ export default function Membership() {
   return (
     <div className="bg-white min-h-screen pb-20">
       {/* Hero */}
-      <div className="bg-slate-950 text-white h-[85vh] min-h-[600px] flex items-end relative overflow-hidden">
+      <div className="bg-slate-950 text-white h-[480px] md:h-[520px] flex items-end relative overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="/Modify 4.jpg"
