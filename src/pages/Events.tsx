@@ -98,7 +98,7 @@ export default function Events() {
       </div>
 
       {/* Main Content */}
-      <section className="py-32 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-16">
             <div className="flex flex-col sm:flex-row justify-between items-center gap-8 border-b border-slate-100 pb-8">
