@@ -57,7 +57,7 @@ export default function About() {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero */}
-      <div className="bg-slate-950 text-white h-[480px] md:h-[520px] flex items-center relative overflow-hidden">
+      <div className="bg-slate-950 text-white h-[400px] md:h-[520px] flex items-center relative overflow-hidden">
         <div className="absolute inset-0 bg-slate-900/10">
           <img
             src="/Image1.jpg"
@@ -68,15 +68,15 @@ export default function About() {
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/40 to-transparent" />
           <div className="absolute inset-0 backdrop-blur-[2px] [mask-image:linear-gradient(to_right,black_20%,transparent_70%)]" />
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-12 md:py-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="max-w-3xl"
           >
-            <h1 className="font-serif text-5xl md:text-7xl font-medium mb-6 tracking-tight leading-tight">Championing AAPI Communities in Real Estate</h1>
-            <p className="text-lg md:text-xl text-slate-300 font-light leading-relaxed">
+            <h1 className="font-serif text-3xl md:text-7xl font-medium mb-4 md:mb-6 tracking-tight leading-tight">Championing AAPI Communities in Real Estate</h1>
+            <p className="text-base md:text-xl text-slate-300 font-light leading-relaxed">
               AREAA Greater Austin is a local chapter of the Asian Real Estate Association of America — the leading voice for AAPI real estate professionals and homebuyers across the nation.
             </p>
           </motion.div>
@@ -84,16 +84,16 @@ export default function About() {
       </div>
 
       {/* Mission & Vision */}
-      <section className="py-32 border-b border-slate-100">
+      <section className="py-16 md:py-32 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20 items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="font-serif text-4xl md:text-5xl font-medium text-slate-900 mb-8 tracking-tight">Who We Are</h2>
+              <h2 className="font-serif text-3xl md:text-5xl font-medium text-slate-900 mb-6 md:mb-8 tracking-tight">Who We Are</h2>
               
               <div className="space-y-6 mb-12">
                 <p className="text-base text-slate-600 leading-relaxed font-light">
@@ -108,7 +108,7 @@ export default function About() {
               </div>
 
               {/* Statistics Grid */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-12 sm:gap-x-20 gap-y-10 py-10 border-t border-slate-100">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-8 sm:gap-x-20 gap-y-8 md:gap-y-10 py-8 md:py-10 border-t border-slate-100">
                 {stats.map((stat, index) => (
                   <div key={index} className="text-left">
                     <div className="text-3xl font-sans font-bold text-areaa mb-2">{stat.value}</div>
@@ -127,7 +127,7 @@ export default function About() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative aspect-[4/5] lg:aspect-auto lg:h-[600px] rounded-[48px] overflow-hidden shadow-2xl"
+              className="relative aspect-[4/5] lg:aspect-auto lg:h-[600px] rounded-2xl md:rounded-[48px] overflow-hidden shadow-2xl"
             >
               <img
                 src="/Image 5.jpg"
@@ -142,10 +142,10 @@ export default function About() {
       </section>
 
       {/* What AREAA Does */}
-      <section className="py-32 border-b border-slate-100 bg-slate-50/50">
+      <section className="py-16 md:py-32 border-b border-slate-100 bg-slate-50/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="font-serif text-4xl md:text-5xl font-medium text-slate-900 mb-6 tracking-tight">What AREAA Greater Austin Does</h2>
+          <div className="text-center mb-10 md:mb-20">
+            <h2 className="font-serif text-3xl md:text-5xl font-medium text-slate-900 mb-6 tracking-tight">What AREAA Greater Austin Does</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -172,12 +172,12 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
-                className="p-10 bg-white border border-slate-100 rounded-3xl shadow-sm hover:shadow-md transition-shadow group"
+                className="p-6 md:p-10 bg-white border border-slate-100 rounded-2xl md:rounded-3xl shadow-sm hover:shadow-md transition-shadow group"
               >
                 <div className="w-16 h-16 rounded-2xl bg-slate-50 flex items-center justify-center text-areaa mb-8 group-hover:bg-areaa group-hover:text-white transition-colors">
                   <item.icon size={32} strokeWidth={1.5} />
                 </div>
-                <h3 className="font-serif text-2xl font-bold mb-4 text-slate-900">{item.title}</h3>
+                <h3 className="font-serif text-xl md:text-2xl font-bold mb-4 text-slate-900">{item.title}</h3>
                 <p className="text-slate-500 leading-relaxed font-light line-clamp-4">{item.desc}</p>
               </motion.div>
             ))}
@@ -186,20 +186,20 @@ export default function About() {
       </section>
 
       {/* Leadership Team */}
-      <section className="py-32">
+      <section className="py-16 md:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="font-serif text-4xl md:text-5xl font-medium text-slate-900 mb-6 tracking-tight">Chapter Leadership</h2>
-            <p className="text-lg text-slate-500 max-w-2xl mx-auto font-light">
+          <div className="text-center mb-10 md:mb-20">
+            <h2 className="font-serif text-3xl md:text-5xl font-medium text-slate-900 mb-6 tracking-tight">Chapter Leadership</h2>
+            <p className="text-base md:text-lg text-slate-500 max-w-2xl mx-auto font-light">
               Meet the dedicated real estate professionals guiding the AREAA Greater Austin chapter.
             </p>
           </div>
 
-          <div className="space-y-24">
+          <div className="space-y-16 md:space-y-24">
             {/* Executive Committee */}
             <div>
-              <h3 className="font-serif text-4xl font-bold text-slate-800 mb-16 text-center lg:text-left">Executive Committee</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+              <h3 className="font-serif text-2xl md:text-4xl font-bold text-slate-800 mb-8 md:mb-16 text-center lg:text-left">Executive Committee</h3>
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-12">
                 {executiveCommittee.map((member, index) => (
                   <motion.div 
                     key={member.name}
@@ -209,7 +209,7 @@ export default function About() {
                     transition={{ delay: index * 0.1, duration: 0.5 }}
                     className="flex flex-col items-center text-center group"
                   >
-                    <div className="relative w-48 h-48 mb-6">
+                    <div className="relative w-28 h-28 md:w-48 md:h-48 mb-4 md:mb-6">
                       <div className="w-full h-full rounded-full overflow-hidden border-4 border-white shadow-lg bg-slate-100 flex items-center justify-center">
                         {member.image ? (
                           <img 
@@ -235,8 +235,8 @@ export default function About() {
 
             {/* Board of Directors */}
             <div>
-              <h3 className="font-serif text-4xl font-bold text-slate-800 mb-16 text-center lg:text-left">Board of Directors</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+              <h3 className="font-serif text-2xl md:text-4xl font-bold text-slate-800 mb-8 md:mb-16 text-center lg:text-left">Board of Directors</h3>
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-12">
                 {boardOfDirectors.map((member, index) => (
                   <motion.div 
                     key={member.name}
@@ -246,7 +246,7 @@ export default function About() {
                     transition={{ delay: index * 0.1, duration: 0.5 }}
                     className="flex flex-col items-center text-center group"
                   >
-                    <div className="relative w-48 h-48 mb-6">
+                    <div className="relative w-28 h-28 md:w-48 md:h-48 mb-4 md:mb-6">
                       <div className="w-full h-full rounded-full overflow-hidden border-4 border-white shadow-lg bg-slate-100 flex items-center justify-center">
                         {member.image ? (
                           <img 

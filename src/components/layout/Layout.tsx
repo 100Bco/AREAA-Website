@@ -130,10 +130,10 @@ export default function Layout() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-slate-950 text-slate-400 py-20 border-t border-slate-900">
+      <footer className="bg-slate-950 text-slate-400 py-12 md:py-20 border-t border-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
-            <div className="col-span-1 md:col-span-1">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="col-span-2 md:col-span-1">
               <Link to="/" className="flex items-center mb-6">
                 <img src="/logo.png" alt="AREAA Greater Austin" className="h-[84px] w-auto brightness-0 invert" />
               </Link>

@@ -28,7 +28,7 @@ export default function Sponsors() {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero */}
-      <div className="bg-slate-950 text-white h-[480px] md:h-[520px] flex items-center relative overflow-hidden">
+      <div className="bg-slate-950 text-white h-[400px] md:h-[520px] flex items-center relative overflow-hidden">
         <div className="absolute inset-0 bg-slate-900/10">
           <img
             src="/Modify 5.jpg"
@@ -39,15 +39,15 @@ export default function Sponsors() {
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/40 to-transparent" />
           <div className="absolute inset-0 backdrop-blur-[2px] [mask-image:linear-gradient(to_right,black_20%,transparent_70%)]" />
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-12 md:py-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="max-w-3xl"
           >
-            <h1 className="font-serif text-5xl md:text-7xl font-medium mb-6 tracking-tight leading-tight">Our<br />Sponsors</h1>
-            <p className="text-lg md:text-xl text-slate-300 font-light leading-relaxed">
+            <h1 className="font-serif text-3xl md:text-7xl font-medium mb-4 md:mb-6 tracking-tight leading-tight">Our<br />Sponsors</h1>
+            <p className="text-base md:text-xl text-slate-300 font-light leading-relaxed">
               We are grateful for the generous support of our partners who make our mission possible.
             </p>
           </motion.div>
@@ -55,8 +55,8 @@ export default function Sponsors() {
       </div>
 
       {/* Sponsors List */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 bg-white">
-        <div className="space-y-32">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-32 bg-white">
+        <div className="space-y-16 md:space-y-32">
           {sponsors.map((tier, index) => (
             <motion.div
               key={tier.tier}
@@ -65,15 +65,15 @@ export default function Sponsors() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.6 }}
             >
-              <div className="text-center mb-20">
-                <h2 className="font-serif text-4xl md:text-5xl font-medium text-slate-900 mb-6 tracking-tight">
+              <div className="text-center mb-10 md:mb-20">
+                <h2 className="font-serif text-3xl md:text-5xl font-medium text-slate-900 mb-6 tracking-tight">
                   {tier.tier} Sponsors
                 </h2>
                 <div className="w-12 h-1.5 bg-areaa mx-auto rounded-full"></div>
               </div>
-              <div className="flex flex-wrap justify-center gap-12 lg:gap-20">
+              <div className="flex flex-wrap justify-center gap-8 md:gap-12 lg:gap-20">
                 {tier.companies.map((company, i) => (
-                  <div key={i} className="flex items-center justify-center w-48 h-24">
+                  <div key={i} className="flex items-center justify-center w-32 h-16 md:w-48 md:h-24">
                     <img
                       src={company.logo}
                       alt={company.name}
@@ -89,7 +89,7 @@ export default function Sponsors() {
       </section>
 
       {/* Become a Sponsor CTA */}
-      <section className="bg-slate-950 py-32 relative overflow-hidden">
+      <section className="bg-slate-950 py-16 md:py-32 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
            <img src="https://images.unsplash.com/photo-1556761175-5973bc0f350d?q=80" className="w-full h-full object-cover" />
         </div>
@@ -103,8 +103,8 @@ export default function Sponsors() {
             <div className="w-16 h-16 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl flex items-center justify-center text-areaa mx-auto mb-10">
               <Handshake size={32} strokeWidth={1.5} />
             </div>
-            <h2 className="font-serif text-4xl md:text-6xl font-medium text-white mb-8 tracking-tight leading-tight">Partner With Us</h2>
-            <p className="text-lg md:text-xl text-slate-400 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+            <h2 className="font-serif text-3xl md:text-6xl font-medium text-white mb-6 md:mb-8 tracking-tight leading-tight">Partner With Us</h2>
+            <p className="text-base md:text-xl text-slate-400 mb-8 md:mb-12 max-w-2xl mx-auto font-light leading-relaxed">
               Partner with AREAA Greater Austin to reach a diverse and growing network of over 19,000 real estate professionals and consumers.
             </p>
             <Button asChild size="lg" className="h-14 px-10 uppercase tracking-widest text-xs font-bold rounded-xl shadow-lg shadow-areaa/20 hover:shadow-areaa/40 transition-all">

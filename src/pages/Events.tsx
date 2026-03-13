@@ -71,7 +71,7 @@ export default function Events() {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero */}
-      <div className="bg-slate-950 text-white h-[480px] md:h-[520px] flex items-center relative overflow-hidden">
+      <div className="bg-slate-950 text-white h-[400px] md:h-[520px] flex items-center relative overflow-hidden">
         <div className="absolute inset-0 bg-slate-900/10">
           <img
             src="/Modify 3.jpg"
@@ -82,15 +82,15 @@ export default function Events() {
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/40 to-transparent" />
           <div className="absolute inset-0 backdrop-blur-[2px] [mask-image:linear-gradient(to_right,black_20%,transparent_70%)]" />
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-12 md:py-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="max-w-3xl"
           >
-            <h1 className="font-serif text-5xl md:text-7xl font-medium mb-6 tracking-tight leading-tight">Events<br />Calendar</h1>
-            <p className="text-lg md:text-xl text-slate-300 font-light leading-relaxed">
+            <h1 className="font-serif text-3xl md:text-7xl font-medium mb-4 md:mb-6 tracking-tight leading-tight">Events<br />Calendar</h1>
+            <p className="text-base md:text-xl text-slate-300 font-light leading-relaxed">
               Stay connected and grow your business by attending our upcoming events, seminars, and networking mixers.
             </p>
           </motion.div>
@@ -105,13 +105,13 @@ export default function Events() {
               <div className="bg-slate-50 p-1.5 rounded-2xl flex border border-slate-100">
                 <button 
                   onClick={() => setActiveTab("upcoming")}
-                  className={`px-8 py-3 rounded-xl transition-all uppercase tracking-widest text-[10px] font-bold ${activeTab === 'upcoming' ? 'bg-white text-areaa shadow-sm' : 'text-slate-400 hover:text-slate-600'}`}
+                  className={`px-4 md:px-8 py-3 rounded-xl transition-all uppercase tracking-widest text-[10px] font-bold ${activeTab === 'upcoming' ? 'bg-white text-areaa shadow-sm' : 'text-slate-400 hover:text-slate-600'}`}
                 >
                   Upcoming Events
                 </button>
-                <button 
+                <button
                   onClick={() => setActiveTab("past")}
-                  className={`px-8 py-3 rounded-xl transition-all uppercase tracking-widest text-[10px] font-bold ${activeTab === 'past' ? 'bg-white text-areaa shadow-sm' : 'text-slate-400 hover:text-slate-600'}`}
+                  className={`px-4 md:px-8 py-3 rounded-xl transition-all uppercase tracking-widest text-[10px] font-bold ${activeTab === 'past' ? 'bg-white text-areaa shadow-sm' : 'text-slate-400 hover:text-slate-600'}`}
                 >
                   Past Highlights
                 </button>
@@ -133,9 +133,9 @@ export default function Events() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="bg-white rounded-[40px] overflow-hidden shadow-sm border border-slate-100 group hover:shadow-xl transition-all duration-500"
+                    className="bg-white rounded-2xl md:rounded-[40px] overflow-hidden shadow-sm border border-slate-100 group hover:shadow-xl transition-all duration-500"
                   >
-                    <div className="relative h-64 overflow-hidden">
+                    <div className="relative h-48 md:h-64 overflow-hidden">
                       <img
                         src={event.image}
                         alt={event.title}
@@ -146,8 +146,8 @@ export default function Events() {
                         {event.date.split(' ')[0]} {event.date.split(' ')[1].replace(',', '')}
                       </div>
                     </div>
-                    <div className="p-10">
-                      <h3 className="font-serif text-2xl font-bold text-slate-900 mb-4 group-hover:text-areaa transition-colors line-clamp-2">
+                    <div className="p-6 md:p-10">
+                      <h3 className="font-serif text-xl md:text-2xl font-bold text-slate-900 mb-4 group-hover:text-areaa transition-colors line-clamp-2">
                         {event.title}
                       </h3>
                       <div className="space-y-4 mb-8">
@@ -177,12 +177,12 @@ export default function Events() {
       </section>
 
       {/* Event Gallery */}
-      <div className="bg-slate-50 py-32 border-t border-slate-200">
+      <div className="bg-slate-50 py-16 md:py-32 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-12">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 md:mb-12">
             <div className="text-left max-w-2xl">
-              <h2 className="font-serif text-4xl md:text-5xl font-medium text-slate-900 mb-6 tracking-tight">Event Gallery</h2>
-              <p className="text-lg text-slate-500 font-light">
+              <h2 className="font-serif text-3xl md:text-5xl font-medium text-slate-900 mb-4 md:mb-6 tracking-tight">Event Gallery</h2>
+              <p className="text-base md:text-lg text-slate-500 font-light">
                 Take a look back at some of our most memorable moments, networking mixers, and community gatherings.
               </p>
             </div>
