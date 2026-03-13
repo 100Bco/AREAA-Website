@@ -84,11 +84,11 @@ export default function Membership() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="max-w-3xl"
           >
-            <p className="text-areaa text-sm font-bold uppercase tracking-[0.2em] mb-6">Join AREAA</p>
-            <h1 className="font-serif text-5xl md:text-7xl font-medium mb-6 tracking-tight leading-[1.1] [text-shadow:0_4px_24px_rgba(0,0,0,0.5)]">
+            <p className="text-areaa text-sm font-bold uppercase tracking-[0.2em] mb-4">Join AREAA</p>
+            <h1 className="font-serif text-4xl md:text-6xl font-medium mb-4 tracking-tight leading-[1.1] [text-shadow:0_4px_24px_rgba(0,0,0,0.5)]">
               Elevate Your Career.<br />Strengthen Your Community.
             </h1>
-            <p className="text-lg md:text-xl text-white/80 font-light leading-relaxed mb-10 max-w-2xl [text-shadow:0_2px_12px_rgba(0,0,0,0.5)]">
+            <p className="text-base md:text-lg text-white/80 font-light leading-relaxed mb-8 max-w-2xl [text-shadow:0_2px_12px_rgba(0,0,0,0.5)]">
               Join over 19,000 real estate professionals making real impact for AAPI communities across the nation.
             </p>
             <Button asChild size="lg" className="w-auto">
