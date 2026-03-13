@@ -1,6 +1,13 @@
 import { motion } from "framer-motion";
-import { Check, ArrowRight, BookOpen, Users, Megaphone, Globe, Tag, Award } from "lucide-react";
+import { Check, ArrowRight, ArrowUpRight, BookOpen, Users, Megaphone, Globe, Tag, Award } from "lucide-react";
 import { Button } from "@/src/components/ui/button";
+
+const stats = [
+  { value: "19,000", suffix: "+", label: "Members Nationwide" },
+  { value: "70", suffix: "+", label: "Local Chapters" },
+  { value: "2", suffix: "", label: "National Conferences / Year" },
+  { value: "Founded 2003", suffix: "", label: "Over 20 Years of Advocacy" },
+];
 
 const detailedBenefits = [
   {
@@ -59,31 +66,62 @@ export default function Membership() {
   return (
     <div className="bg-white min-h-screen pb-20">
       {/* Hero */}
-      <div className="bg-slate-950 text-white h-[480px] md:h-[520px] flex items-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-slate-900/10">
+      <div className="bg-slate-950 text-white h-[85vh] min-h-[600px] flex items-end relative overflow-hidden">
+        <div className="absolute inset-0">
           <img
             src="/Modify 4.jpg"
             alt="Membership"
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/40 to-transparent" />
-          <div className="absolute inset-0 backdrop-blur-[2px] [mask-image:linear-gradient(to_right,black_20%,transparent_70%)]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-950/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent" />
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pb-20 md:pb-28">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="max-w-3xl"
           >
-            <h1 className="font-serif text-5xl md:text-7xl font-medium mb-6 tracking-tight leading-tight">Join AREAA<br />Greater Austin</h1>
-            <p className="text-lg md:text-xl text-slate-300 font-light leading-relaxed">
-              Become part of a powerful network of over 19,000 real estate professionals nationwide.
+            <p className="text-areaa text-sm font-bold uppercase tracking-[0.2em] mb-6">Join AREAA</p>
+            <h1 className="font-serif text-5xl md:text-7xl font-medium mb-6 tracking-tight leading-[1.1] [text-shadow:0_4px_24px_rgba(0,0,0,0.5)]">
+              Elevate Your Career.<br />Strengthen Your Community.
+            </h1>
+            <p className="text-lg md:text-xl text-white/80 font-light leading-relaxed mb-10 max-w-2xl [text-shadow:0_2px_12px_rgba(0,0,0,0.5)]">
+              Join over 19,000 real estate professionals making real impact for AAPI communities across the nation.
             </p>
+            <Button asChild size="lg" className="w-auto">
+              <a href="https://areaa.org/join" target="_blank" rel="noopener noreferrer">
+                Join AREAA Now
+                <ArrowUpRight className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
           </motion.div>
         </div>
       </div>
+
+      {/* Stats Bar */}
+      <section className="py-12 bg-white border-b border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <p className="font-sans text-3xl md:text-4xl font-bold text-areaa tracking-tight mb-2">
+                  {stat.value}<span className="text-areaa">{stat.suffix}</span>
+                </p>
+                <p className="text-sm text-slate-500 font-light">{stat.label}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Member Benefits */}
       <section className="py-16 bg-white">
